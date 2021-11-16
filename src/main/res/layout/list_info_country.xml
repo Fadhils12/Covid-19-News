@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <data>
+
+        <variable
+            name="allInfoCountry"
+            type="com.example.covid19news.viewModel.InfoCountryViewModel" />
+
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_bg">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/rl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#F2F2F2"
+                android:elevation="@dimen/dp8"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.appcompat.widget.SearchView
+                    android:id="@+id/search_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/sp18"
+                    android:layout_marginVertical="36dp"
+                    android:background="@drawable/box_search_country"
+                    android:elevation="6dp"
+                    android:textCursorDrawable="@null"
+                    app:actionViewClass="android.widget.SearchView"
+                    app:iconifiedByDefault="false"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:queryBackground="@null"
+                    app:queryHint="Search Country" />
+
+            </RelativeLayout>
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/btn_back"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:elevation="8dp"
+                android:src="@drawable/ic_arrow_left"
+                app:civ_circle_background_color="#D9D9D9"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.05"
+                app:layout_constraintBottom_toBottomOf="@+id/rl"
+                app:layout_constraintStart_toStartOf="@+id/rl"
+                app:layout_constraintTop_toBottomOf="@+id/rl" />
+
+            <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/swipe_country"
+                android:paddingVertical="24dp"
+                app:layout_constraintTop_toBottomOf="@+id/rl">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_country"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0"
+                    tools:listitem="@layout/item_list_info_country"/>
+
+            </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</layout>

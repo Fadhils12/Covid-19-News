@@ -1,0 +1,118 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.Covid19News" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="collapsed_app_bar" parent="@android:style/TextAppearance">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <!--    region Text-->
+    <style name="TextMatch">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+
+    <!--    region text Data Globe, MainActivity-->
+    <style name="TextDataKind" parent="TextMatch">
+        <item name="android:layout_marginTop">@dimen/dp8</item>
+        <item name="android:textSize">@dimen/sp16</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:textColor">#F0F1F4</item>
+    </style>
+
+    <style name="TextDataCount" parent="TextMatch">
+        <item name="android:textColor">#F0F1F4</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:layout_marginBottom">@dimen/dp8</item>
+        <item name="android:textSize">@dimen/sp18</item>
+    </style>
+
+    <style name="TextHeader" parent="TextMatch">
+        <item name="android:textSize">@dimen/sp12</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">#F0F1F4</item>
+    </style>
+
+    <style name="TextListData" parent="TextHeader">
+        <item name="android:layout_marginTop">0dp</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:textColor">#F0F1F4</item>
+    </style>
+    <!--    endregion-->
+
+
+    <!--    region Text Card, ChartCountryActivity-->
+    <style name="TextTitleCard" parent="TextTitle">
+        <item name="android:textAlignment">center</item>
+    </style>
+
+    <style name="TextSubTitleCard" parent="TextTitleCard">
+        <item name="android:textSize">12sp</item>
+    </style>
+    <!--    endregion-->
+    <!--    endregion-->
+
+
+    <!--    region LinearLayout-->
+    <style name="LinearMatchHorizontal">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:layout_marginStart">@dimen/dp8</item>
+        <item name="android:layout_marginEnd">@dimen/dp8</item>
+    </style>
+
+    <style name="LinearTextVertical">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="elevation">8dp</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:layout_marginBottom">8dp</item>
+        <item name="android:layout_marginEnd">@dimen/dp2</item>
+        <item name="android:layout_marginStart">@dimen/dp2</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="LinearMatch">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="LinearTextCurrentData" parent="LinearMatch">
+        <item name="android:gravity">center</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="LinearDataChart" parent="LinearMatch">
+        <item name="android:layout_weight">1</item>
+    </style>
+
+    <style name="CardLinearHorizontal" parent="LinearDataChart">
+        <item name="android:orientation">horizontal</item>
+    </style>
+    <!--    endregion-->
+
+    <style name="CardDataCovid" parent="LinearMatch">
+        <item name="android:layout_weight">1</item>
+        <item name="cardElevation">@dimen/dp4</item>
+        <item name="cardCornerRadius">@dimen/dp8</item>
+        <item name="android:layout_margin">@dimen/dp8</item>
+    </style>
+
+</resources>
